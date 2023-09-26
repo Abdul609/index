@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="overall.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<title>Task Page</title>
+</head>
+<body>
+<div class="container-fluid ">
+	<div class="row">
+		<div class="col-4 col-md-2 my-5">
+			<button id="addtask" class="btn btn-light">
+  			<img width="10%" src="clipboard.png">Task</button>
+			<br>
+			<button id="location" class="btn btn-light my-5">
+  			<img class="mx-5 my-1" width="10%" src="location.png"><a href="Location.html">Location</a></button>
+			<br>
+			<button id="logout" class="btn btn-light text-decoration-none ">
+  			<img class="mx-2 " width="5%" src="logout.png"><a href="LoginPage.html">Log Out</a></button>
+		</div>
+		<div class="col-8 col-md-10 py-5">
+			<div class="addtask">
+				<button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:transparent;border-style: none;"><h5><b> + Add new task</b></h5></button>
+				<h5 class="py-3"><b>Incomplete</b></h5>
+			</div>
+			<div class="alarm">
+				<ul class="list " id="contentList">
+						
+						</ul>
+			</div>
+			<div class="complete-task">
+				<h5 class="py-3"><b>Completed</b></h5>
+							<div class="Completed">
+				<ul class="list " id="completed">
+						
+						</ul>
+			</div>
+			</div>
+		</div>
+		<div class="col">
+		</div>
+	</div>
+</div>
+
+															<!-- Modal -->
+
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  	<div class="modal-dialog modal-dialog-centered" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-body rounded-3">
+		        		<div class="container">
+		            		<div class="row">
+		                		<div class="mx-auto newtask">
+		                    			<h5 class="px-5">New Task</h5>
+		                    			<input id="task" type="text" class="icon py-2 mx-5 px-5" value placeholder="Summary">
+		                    			<input type="text" class="dp mx-5 px-5 py-3" value placeholder="Description">
+		                    			<input type="datetime-local" class="date mx-5 px-5" placeholder="Due Date">
+		                    			<div class="d-grid gap-2 d-flex justify-content-center">
+		                        		<button id="add" class="btn btn-secondary d-flex" type="button">Save</button>
+		                        		<button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
+		                    		</div>
+		                		</div>
+		            		</div>
+		        		</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		</div>
+
+
+		<script type="text/javascript">
+			let taskField = document.getElementById('task')
+			let taskList = document.getElementById('contentList');
+			let addBtn = document.getElementById('add');
+			let com = document.getElementById('completed')
+
+				function getNewTask() {
+		let newTask = taskField.value;
+		console.log(newTask)
+
+		taskList.innerHTML += `
+
+		<li>
+				<input class="mx-5" type="checkbox" id="Todo" name="todolist" value="task-1" onchange="completeTask(this)">
+				<label for="todolist">${newTask} </label>
+		</li>
+
+		`
+
+	}
+
+	addBtn.addEventListener('click', getNewTask);
+
+	function completeTask(checkbox) {
+    if (checkbox.checked) {
+        const taskItem = checkbox.parentElement;
+        document.getElementById('completed').appendChild(taskItem);
+    } else {
+        const taskItem = checkbox.parentElement;
+        document.getElementById('contentList').appendChild(taskItem);
+    }
+}
+
+
+		</script>
+
+</body>
+</html>

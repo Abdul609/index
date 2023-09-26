@@ -1,0 +1,130 @@
+body{
+	margin: 0;
+	padding: 0;
+
+}
+
+.login{
+	margin-top: 15%;
+}
+
+.input{
+	width: 343px;
+	height: 50px;
+	border-radius: 10px;
+	background-color:#F6F6F6;
+	border-style: none;
+	outline: none;
+}
+
+.btn{
+	border-radius: 50px;
+}
+
+/* <------- Login Page CSS END --------> */
+
+
+/* <------- Task Page CSS Start --------> */
+
+
+#addtask{
+	height: 55px;
+	border-radius: 30px;
+	transform: translate(-60px);
+}
+
+#addtask:hover {
+  background-color:black;
+  color:white;
+}
+
+#addtask:active {
+  background-color:white;
+}
+
+#location{
+	height: 55px;
+	border-radius: 30px;
+	transform: translate(-60px);
+}
+
+#location:hover {
+  background-color:black;
+  color:white;
+}
+
+#location:active {
+  background-color:white;
+}
+
+#logout:hover {
+  background-color: #000;
+  color: white;
+}
+
+#logout:active {
+  background-color: #000;
+}
+
+#logout{
+	height: 55px;
+	border-radius: 30px;
+	transform: translate(-60px,450px);
+}
+
+.list{
+	list-style: none;
+}
+
+/* <------- Media Query Task Page --------> */
+@media only screen and (min-width: 300px) and (max-width:687px){
+	  #addtask{
+		width: 150px;
+		padding-left: 40%;
+	}
+		#location{
+		width: 150px	;
+		padding-left: 40%;
+	}
+	#logout{
+		width: 150px	;
+		padding-left: 40%;	
+	}
+}
+
+
+
+/* <------- Task Page CSS End --------> */
+
+
+/* <------- New Task CSS Start --------> */
+
+.icon {
+  	padding-left: 25px;
+  	background: url("Vector.svg") no-repeat left;
+  	background-size: 20px;
+  	width: 50%;
+  	background-color: transparent;
+	border-style: none;
+	outline: none;
+}
+
+.dp{
+	padding-left: 25px;
+  	background: url("Vector-2.svg") no-repeat left;
+  	background-size: 20px;
+  	background-color: transparent;
+	border-style: none;
+	outline: none;	
+}
+
+.date{
+	padding-left: 25px;
+  	background: url("Vector-3.svg") no-repeat left;
+  	background-size: 20px;
+  	background-color: transparent;
+	border-style: none;	
+	outline: none;
+
+
+.data focus

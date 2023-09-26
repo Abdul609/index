@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="overall.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<title>Location Page</title>
+</head>
+<body>
+<div class="container-fluid ">
+	<div class="row">
+		<div class="col-4 col-md-2 my-5">
+			<button id="addtask" class="btn btn-light">
+  			<img width="10%" style="margin-right:10%;" src="clipboard.png"><a style="text-decoration: none;color: black;" href="Task.html">Task</a></button>
+			<br>
+			<button id="location" class="btn btn-light my-5">
+  			<img class="mx-5 my-1" width="10%" src="location.png">Location</button>
+			<br>
+			<button id="logout" class="btn btn-light">
+  			<img class="mx-2 " width="5%" src="logout.png"><a style="text-decoration:none;color: white;" href="LoginPage.html">Log Out</a></button>
+		</div>
+		<div class="col-8 col-md-10 py-5">
+			<div class="addtask">
+				<button style="background-color:transparent;border-style: none;"><h5><b> + Check In</b></h5></button>
+				<h5 class="py-3"><b>Current Lcation</b></h5>
+			</div>
+			<div class="alarm">
+				<ul class="list " id="taskList">
+							<li>
+								<h5 > <img src="pin.png">Putegrand,Stockholm,SE</h5><br>
+							</li>
+						</ul>
+			</div>
+			<div class="complete-task">
+				<h5 class="py-3"><b>Previous Location</b></h5>
+							<div class="Completed">
+				<ul class="list " id="taskList">
+							<li>
+				  				<h5><img src="pin.png">Putegrand,Stockholm,SE</h5></label><br>
+							</li>
+							<li>
+				  				<h5 class="my-3"><img src="pin.png">Putegrand,Stockholm,SE</h5><br>
+							</li>
+							<li>
+				  				<h5 ><img src="pin.png"> Putegrand,Stockholm,SE</h5><br>
+							</li>
+							<li>
+				  				<h5><img src="pin.png"> Putegrand,Stockholm,SE</h5><br>
+							</li>
+							<li>
+				  				<h5><img src="pin.png"> Putegrand,Stockholm,SE</h5><br>
+							</li>
+						</ul>
+			</div>
+			</div>
+		</div>
+		<div class="col">
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
